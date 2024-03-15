@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up Form</title>
+<link rel="stylesheet" href="styles1.css">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+<div class="signup-form">
+    <form id="signup" action="signup.html" method="post">
+    
+        <h2>Sign Up</h2> <br>
+
+    <div class="field">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter Your Full Name">
+        <small></small>
+    </div>
+    
+
+    <div class="field">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter Your Email">
+        <small></small>
+    </div>
+
+    <div class="field">
+        <label for="postalcode">Postal Code:</label>
+        <input type="text" id="postalcode" name="postalcode" placeholder="Enter Your Postal Code">
+        <small></small>
+    </div>
+
+    <div class="field">
+        <label for="city">City:</label>
+        <select id="city" name="city">
+            <option value="toronto">Toronto</option>
+            <option value="montreal">Montreal</option>
+            <option value="vancouver">Vancouver</option>
+            <option value="calgary">Calgary</option>
+            <option value="ottawa">Ottawa</option>
+        </select>
+        <div class="error"></div>
+        <button id="remove" type="button" onclick="removecity()">Remove Wrong City</button>
+    </div>
+
+    <div class="field">
+        <label for="password">Password:</label>
+        <input id="passwordInput" name="password" type="password" placeholder="Type your Password">
+        <i class="bi bi-eye-slash" id="togglePassword" onclick="togglePassword()"></i>
+        <small></small>
+    </div>
+    
+    <div class="field">
+        <label for="confirmPassword">Confirm Password:</label>
+        <input id="confirmPassword" name="confirmPassword" type="password" placeholder="Confirm your Password">
+        <i class="bi bi-eye-slash" id="togglePassword" onclick="togglePassword1()"></i>
+        
+        <small></small>
+    </div>
+
+
+
+
+  
+        <div class="field">
+            <button class="full" id="submit" type="submit" onclick="openpopup()">Subscribe</button>
+        </div>
+        
+  
+
+
+<div id="popup">
+    <div class="popup-content">
+        <div id="infopop">
+        </div>
+        <button id="popbuttonC">Confirm</button>
+        <button id="popbuttonCancel">Cancel</button>
+    </div>
+</div>
+
+
+</form>
+
+</div>
+
+<script src="script1.js"></script>
+</body>
+</html>
